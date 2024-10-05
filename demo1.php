@@ -7,7 +7,19 @@
 </head>
 <body>
     
-<form action="output.php" method="POST">
+    <?php if (isset($_GET["error"])){ ?>
+  <p style="background-color: red;color: aliceblue"><?php echo $_GET["error"];?></p>
+  <?php
+    }
+    ?>
+  
+  <?php if (isset($_GET["success"])){ ?>
+     <p style="background-color: green;color: aliceblue"><?php echo $_GET["success"];?></p>
+ <?php
+ }
+ ?>
+
+<form action="output.php" method="Post">
 
 <div>
     <label for="Username">Username</label>
